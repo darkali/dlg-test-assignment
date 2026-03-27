@@ -1,0 +1,54 @@
+/* Basic Reset & Accessibility */
+:root {
+  --primary-blue: #004a99; /* High contrast blue */
+  --text-color: #222;
+  --bg-color: #fff;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* Skip Link for Keyboard Users */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--primary-blue);
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Responsive Layout */
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+header {
+  background: var(--primary-blue);
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+}
