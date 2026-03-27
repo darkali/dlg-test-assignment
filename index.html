@@ -122,8 +122,9 @@
           </li>
         </ol>
       </section>
+      <hr />
       <section id="seo" aria-labelledby="seo-heading" class="mt-5">
-        <h2 id="seo-heading">SEO Expansion Plan</h2>
+        <h2 id="seo-heading">2. SEO Expansion Plan</h2>
         <p>
           To move from a local Michigan firm to a statewide and national
           authority, the SEO strategy must shift from geography-based keywords
@@ -335,6 +336,173 @@
             Begin outreach to legal and veteran directories.
           </li>
         </ol>
+      </section>
+      <hr />
+      <section id="analytics" aria-labelledby="analytics-heading" class="mt-5">
+        <h2 id="analytics-heading">3. Analytics and Reporting Strategy</h2>
+        <p>
+          For a marketing-driven legal practice like the Disability Law Group,
+          an analytics framework must bridge the gap between technical web
+          performance and business-critical lead generation. The following
+          strategy focuses on capturing high-intent behaviors while providing
+          the transparency needed to optimize marketing spend.
+        </p>
+        <h3>1. User Behaviors &amp; Business Events</h3>
+        <p>
+          Tracking is divided into <strong>Macro-Conversions</strong> (direct
+          revenue-driving actions) and
+          <strong>Micro-Conversions</strong> (indicators of intent and brand
+          trust).
+        </p>
+        <div class="row">
+          <div class="col-md-6">
+            <h4>Macro-Conversions (Business Events)</h4>
+            <ul>
+              <li>
+                Lead Form Submissions: Successful completion of "Free Case
+                Evaluation" or "Contact Us" forms.
+              </li>
+              <li>
+                Click-to-Call: Phone number clicks from mobile and desktop
+                users.
+              </li>
+              <li>
+                Live Chat Initiation: When a user starts a conversation with the
+                site’s intake bot or representative.
+              </li>
+              <li>
+                Email Link Clicks (Mailto): Direct clicks to the firm’s contact
+                emails.
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h4>Micro-Conversions (Engagement Behaviors)</h4>
+            <ul>
+              <li>
+                Resource Downloads: Tracking when users download "VA Rating
+                Checklists" or "SSD Appeal Guides."
+              </li>
+              <li>
+                Video Engagement: Monitoring play rates and 75% completion marks
+                on educational videos regarding disability law.
+              </li>
+              <li>
+                Scroll Depth: Measuring users who reach the bottom of long-form
+                legal articles (indicating high topical interest).
+              </li>
+              <li>
+                Internal Search Queries: Tracking what users search for within
+                the site to identify gaps in educational content.
+              </li>
+              <li>
+                Accessibility Interactions: Tracking use of accessibility
+                widgets or high-contrast toggles to ensure the site meets the
+                needs of its core demographic.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <h3>2. Event Tracking Structure (GA4 &amp; GTM)</h3>
+        <p>
+          To maintain data integrity and allow for easy scaling, a standardized
+          naming convention is essential. Using Google Tag Manager (GTM) to push
+          events into Google Analytics 4 (GA4) ensures that the tracking is
+          decoupled from the hard code.
+        </p>
+        <div class="table-responsive">
+          <table class="table table-bordered table-striped align-middle">
+            <caption class="visually-hidden">
+              Event Tracking Structure for GA4 &amp; GTM
+            </caption>
+            <thead class="table-dark">
+              <tr>
+                <th scope="col">Event Name</th>
+                <th scope="col">Parameter: category</th>
+                <th scope="col">Parameter: label</th>
+                <th scope="col">Parameter: value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>generate_lead</td>
+                <td>form_submission</td>
+                <td>footer_evaluation_form</td>
+                <td>(Assigned Lead Value)</td>
+              </tr>
+              <tr>
+                <td>contact_click</td>
+                <td>click_to_call</td>
+                <td>header_phone_number</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>file_download</td>
+                <td>educational_resource</td>
+                <td>va_rating_guide_pdf</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>video_progress</td>
+                <td>educational_video</td>
+                <td>how_to_file_ssd_claim</td>
+                <td>% Watched</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          <strong>Implementation Detail:</strong> We will utilize a Data Layer
+          implementation for form submissions. Instead of just tracking a button
+          click (which can lead to false positives), we will trigger the event
+          only upon a successful "thank you" state or server-side validation.
+        </p>
+        <h3>3. Key Metrics for Performance Reports</h3>
+        <ul>
+          <li>
+            <strong>Conversion Rate by Source/Medium:</strong> Identifying which
+            channels (Organic Search, PPC, Social) provide the highest quality
+            leads.
+          </li>
+          <li>
+            <strong>Cost Per Lead (CPL):</strong> Total marketing spend divided
+            by total macro-conversions.
+          </li>
+          <li>
+            <strong>Landing Page Attribution:</strong> Identifying which
+            specific legal guides or blog posts are the "First Touch" that
+            eventually leads to a consultation.
+          </li>
+          <li>
+            <strong>Site Stability &amp; Accessibility Score:</strong> Monthly
+            reporting on Core Web Vitals (LCP, CLS) and WCAG compliance levels
+            to ensure the site isn't creating barriers for claimants.
+          </li>
+          <li>
+            <strong>Form Abandonment Rate:</strong> Identifying specific fields
+            (e.g., asking for a Social Security Number too early) that cause
+            users to drop off before submitting.
+          </li>
+        </ul>
+        <h3>4. Informing Strategic Decision-Making</h3>
+        <ul>
+          <li>
+            <strong>Content Strategy:</strong> If the "VA Disability" guides
+            have a high scroll depth but low conversion, we know we need to
+            optimize the Call-to-Action (CTA) placement on those specific pages.
+          </li>
+          <li>
+            <strong>Budget Allocation:</strong> If Paid Search (PPC) shows a
+            high volume of clicks but a low conversion rate compared to Organic
+            SEO, the firm can pivot budget toward high-authority content
+            creation.
+          </li>
+          <li>
+            <strong>UX Improvements:</strong> If the "Contact Us" form has a
+            high abandonment rate on mobile, we can prioritize a technical
+            redesign of the mobile intake interface.
+          </li>
+        </ul>
       </section>
     </main>
 
