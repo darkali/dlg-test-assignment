@@ -16,11 +16,22 @@
     <header role="banner">
       <h1>Eumir Arcilla</h1>
       <p>Senior Web Front-End Developer Candidate</p>
-      <nav role="navigation" aria-label="Main Menu">
-        <ul>
-          <li><a href="#workflow">Workflow</a></li>
-          <li><a href="#seo">SEO Plan</a></li>
-          <li><a href="#analytics">Analytics</a></li>
+      <nav id="main-navigation" role="navigation" aria-label="Main Menu">
+        <ul
+          class="nav justify-content-center mb-4"
+          style="list-style: none; padding-left: 0"
+        >
+          <li class="nav-item">
+            <a class="nav-link active" href="#workflow" aria-current="page"
+              >Workflow</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#seo">SEO Plan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#analytics">Analytics</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -504,9 +515,17 @@
           </li>
         </ul>
       </section>
+      <a
+        href="#main-navigation"
+        class="btn btn-primary position-fixed bottom-0 end-0 m-4"
+        style="z-index: 1030"
+        aria-label="Back to top and navigation"
+      >
+        ↑ Back to Top
+      </a>
     </main>
 
-    <footer role="contentinfo">
+    <footer role="contentinfo" class="text-end bg-dark text-white py-3 mt-5">
       <p>
         &copy; 2026 Eumir Arcilla. Built for Disability Law Group Accessibility
         Standards.
